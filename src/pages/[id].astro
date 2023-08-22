@@ -1,0 +1,45 @@
+---
+export function getStaticPaths() {
+    const links = [
+        "Folieton",
+        "Istorie",
+        "Cronica de spectacol",
+        "Atelier literar",
+        "Xinaxar",
+        "O carte pe saptamana",
+        "Evenimente culturale",
+    ];
+    return links.map((link) => {
+        return { params: { id: link } };
+    });
+}
+const { id } = Astro.params;
+import Post from "../layouts/Post.astro";
+
+const preview = {
+    Folieton: [],
+    Istorie: [],
+    "Cronica de spectacol": [],
+    "Atelier literar": [],
+    Xinaxar: [],
+    "O carte pe saptamana": [],
+    "Evenimente culturale": [],
+};
+---
+
+<Post title="postare">
+    <div class="flex flex-col gap-2 prose-xl">
+        {
+            preview[id as keyof typeof preview].map((item) => {
+                return (
+                    <a
+                        class="p-2 bg-base-200 rounded-lg shadow-sm hover:bg-base-300 active:invert"
+                        href={"/" + id + "/" + item}
+                    >
+                        {item}
+                    </a>
+                );
+            })
+        }
+    </div>
+</Post>
