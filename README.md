@@ -1,6 +1,6 @@
 # Botosani cultural
 
-A blog built with Astro and Tailwindcss
+A blog built with Astro.
 
 Stack:
 * FE: Astro
