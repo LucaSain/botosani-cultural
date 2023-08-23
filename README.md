@@ -1,7 +1,7 @@
 # Botosani cultural
 
-A blog built with AstroJS and Tailwindcss
+A blog built with Astro and Tailwindcss
 
 Stack:
-* FE: AstroJS
+* FE: Astro
 * UI: TailwindCSS, DaisyUI
