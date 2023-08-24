@@ -1,3 +1,7 @@
+---
+layout: "../../layouts/Post.astro"
+---
+
 Pe 2 aprilie 1839, la Iași, ieșea de sub tipar, la tipografia Institutului Albinei, primul număr al „Foii Sătești a Principatului Moldovei”, din străduința redactorului Gheorghe Asachi. Preambulul Ahaforalei reda rezumativ scopul acestei prime publicații din zona Moldovei:
 „Ocârmuirea acestui pământ, plină de îngrijire de a întemeia și a spori binele tuturor treptelor de locuitori, u socotit de cuviință  a se înființa această Foaie numită Sătească, ca prin a ei mijlocire să se facă cunoscute sătenilor toate poroncile și povățuirile  ce se slobod pentru îndemânarea locuitorilor. Părintele Parohul, adică Preotul satului în toate Duminicile, după ieșire din Sfânta Liturghie, va aduna pe poporăni la un loc cuvenit și va citi în auzul tuturor  cuprinderea acestei Foi, pentru ca să înțeleagă fieșcarele și să urmeze celor poroncite. Către aceste uneori se vor adăugi sfaturi înțelepte și folositoare pentru păstrarea sănătății atât a oamenilor, cum și a vitelor lor, și povățuiri pentru câte privesc la fericirea locuitorilor.”
 Cititorului anului 2023, „Foaia Sătească” îi oferă posibilitatea plonjării într-un trecut, aproape uitat, în care oamenii acestor locuri își trăiau viața de zi cu zi: își scoteau casele la mezat, mergeau în procese pentru „împresurarea” moșiilor, își pierdeau și își recuperau vitele, cumpărau și vindeau dughene, își căutau țiganii fugari, aflați încă în robie  etc.
