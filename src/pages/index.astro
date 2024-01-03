@@ -3,34 +3,32 @@ import Layout from "../layouts/Layout.astro";
 import "@fontsource/lobster";
 
 const links = [
-  "Folieton",
-  "Istorie",
-  "Cronica de spectacol",
+  "Crochiuri",
+  "Cronica de carte",
   "Atelier literar",
-  "Xinaxar",
-  "O carte pe saptamana",
+  "Patrimoniu",
   "Evenimente culturale",
+  "Evenimente +"
 ];
 const preview = {
-  Folieton: ["Ionășenii lui Balș", "Filimon Ilea", "Ștefan Cacoveanu"],
-  Istorie: [],
-  "Cronica de spectacol": [],
+  "Crochiuri":[],
+  "Cronica de carte":[],
   "Atelier literar": [],
-  Xinaxar: [],
-  "O carte pe saptamana": [],
+  "Patrimoniu":[],
   "Evenimente culturale": [],
+  "Evenimente +":[]
 };
 ---
 
 <Layout title="Botosani cultural">
   <div class="flex flex-col min-h-screen w-screen">
     <img
-      class="absolute z-0 h-full sm:w-full sm:max-h-max opacity-30 object-cover"
+      class="absolute z-0 h-full sm:w-full sm:max-h-max opacity-40 object-cover"
       src="bg.png"
     />
     <div class="relative z-10 h-screen flex justify-center items-center">
-      <div class="text-5xl sm:text-5xl md:text-6xl lg:text-9xl font-[Lobster]">
-        Botoșani cultural
+      <div class="text-5xl sm:text-5xl md:text-6xl lg:text-9xl font-[Lobster] flex items-center gap-2 sm:gap-5">
+        Monoclu: Botoșani <span class="text-[90px] sm:text-[140px] md:text-[180px]">+</span>
       </div>
     </div>
     <div
@@ -39,7 +37,7 @@ const preview = {
       {
         links.map((link) => {
           return (
-            <div class="bg-base-300 rounded-md p-4 flex flex-col gap-1">
+            <div class="rounded-md p-4 flex flex-col gap-1 bg-gradient-to-tr from-base-200 to-base-300 via-base-300 border-2 border-neutral border-opacity-40">
               <a href={link} class="text-3xl">
                 {link}
               </a>
@@ -47,7 +45,7 @@ const preview = {
                 return (
                   <a
                     href={"/" + link + "/" + item}
-                    class="alert rounded-lg hover:bg-base-300 active:invert"
+                    class="alert rounded-lg hover:bg-base-300 active:invert "
                   >
                     <span>{item}</span>
                   </a>
