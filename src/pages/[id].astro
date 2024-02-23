@@ -14,13 +14,13 @@ export function getStaticPaths() {
 }
 const { id } = Astro.params;
 import Post from "../layouts/Post.astro";
-import { preview } from "./index.astro";
+const posts = await fetch(import.meta.env.URL+"/"+id+".json").then(res=>res.json());
 ---
 
 <Post title="postare">
     <div class="flex flex-col gap-2 prose-xl">
         {
-            preview[id as keyof typeof preview].map((item) => {
+            posts.map((item:string) => {
                 return (
                     <a
                         class="p-2 bg-base-200 rounded-lg shadow-sm hover:bg-base-300 active:invert"

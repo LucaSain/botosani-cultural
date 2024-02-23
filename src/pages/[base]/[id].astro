@@ -1,0 +1,10 @@
+---
+import md from "markdown-it"
+import Post from "../../layouts/Post.astro"
+const { id } = Astro.params;
+const markdown = await fetch(import.meta.env.URL+"/"+id+".json").then(res=>res.json());
+---
+<Post title={id||"postare"}>
+<div set:html={md().render(markdown)}>
+</div>
+</Post>

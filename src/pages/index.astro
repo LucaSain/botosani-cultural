@@ -10,14 +10,16 @@ const links = [
   "Evenimente culturale",
   "Evenimente +"
 ];
-export const preview = {
-  "Crochiuri":["Amintiri despre Eminescu - Frangolea","Test"],
-  "Cronica de carte":[],
-  "Atelier literar": [],
-  "Patrimoniu":[],
-  "Evenimente culturale": [],
-  "Evenimente +":[]
-};
+
+let preview:Array<any>=[];
+for(let i=0;i<links.length;i++){
+  const response = await fetch(import.meta.env.URL + "/" + links[i] + ".show.json").then(res=>res.json());
+  console.log(response)
+preview.push(response)
+}
+
+    
+
 ---
 
 <Layout title="Botosani cultural">
@@ -36,12 +38,15 @@ export const preview = {
     >
       {
         links.map((link) => {
+          
           return (
             <div class="rounded-md p-4 flex flex-col gap-1 bg-gradient-to-tr from-base-200 to-base-300 via-base-300 border-2 border-neutral border-opacity-40">
               <a href={link} class="text-3xl">
                 {link}
               </a>
-              {preview[link as keyof typeof preview].map((item) => {
+              { 
+
+                preview[links.indexOf(link)].map((item:string) => {
                 return (
                   <a
                     href={"/" + link + "/" + item}
@@ -50,7 +55,8 @@ export const preview = {
                     <span>{item}</span>
                   </a>
                 );
-              })}
+              })
+            }
             </div>
           );
         })
