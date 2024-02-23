@@ -8,5 +8,7 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   output: 'server',
   integrations: [tailwind(), mdx()],
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  })
 });
